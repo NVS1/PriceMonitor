@@ -16,7 +16,7 @@ public class SchedulingTasks {
     private final long MINUTE = SECOND * 60;
     private final long HOUR = MINUTE*60;
 
-    @Scheduled(fixedDelay = HOUR)
+    @Scheduled(fixedDelay = HOUR/2)
     public void priceMonitor(){
         if (priceService.isStatus()){
             priceService.enableMonitoringOfPrice();
